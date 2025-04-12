@@ -14,48 +14,44 @@ interface EmailProps {
   userFirstname: string;
 }
 
-export const NotionWaitlistEmail = ({ userFirstname }: EmailProps) => (
+export const CampusRankWaitlistEmail = ({ userFirstname }: EmailProps) => (
   <Html>
     <Head />
-    <Preview>Thanks for Joining the Waitlist, {userFirstname}! 🎉</Preview>
+    <Preview>Welcome to Campus Rank Waitlist, {userFirstname}! 🎓</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`https://nextjs-notion-waitlist.vercel.app/waitlist-logo.png`}
+          src={`https://campus-rank.priynshuchouhn.engineer/logo.jpg`}
           width="220"
           height="100"
-          alt="Notion Waitlist Logo"
+          alt="Campus Rank Logo"
           style={logo}
         />
         <Text style={greeting}>Hi {userFirstname},</Text>
         <Text style={paragraph}>
-          Thanks for joining the waitlist for our Next.js + Notion CMS waitlist
-          template! I'm Lakshay, the developer behind this project. I'm glad to
-          have you on board.
+          Thank you for joining the Campus Rank waitlist! We&apos;re excited to have you on board as we build the future of campus rankings and student insights.
         </Text>
         <Text style={paragraph}>
-          I'll keep you posted on the progress and notify you as soon as it's
-          ready for you to use. In the meantime, if you have any questions or
-          feedback, don't hesitate to reach out by replying directly to{" "}
-          <a href="mailto:lakshb.work@gmail.com" style={link}>
+          We&apos;ll keep you updated on our progress and notify you as soon as Campus Rank is ready for you to explore. If you have any questions or suggestions, feel free to reach out by replying directly to{" "}
+          <a href="mailto:priynshuchouhn@gmail.com" style={link}>
             this email {""}
           </a>
-          — I'm here to listen!
+          — we&apos;d love to hear from you!
         </Text>
         <Text style={paragraph}>
-          You can also follow me on X/Twitter for updates:{" "}
-          <a href="https://x.com/blakssh" style={link}>
-            @blakssh
+          Stay connected with us on social media for updates and campus insights:{" "}
+          <a href="https://x.com/priynshuchouhn" style={link}>
+            @priynshuchouhn
           </a>
         </Text>
         <Text style={signOff}>
           Best regards,
           <br />
-          Lakshay
+          The Campus Rank Team
         </Text>
         <Hr style={hr} />
         <Text style={footer}>
-          You received this email because you signed up for the Notion waitlist.
+          You received this email because you signed up for the Campus Rank waitlist.
           If you believe this is a mistake, feel free to ignore this email.
         </Text>
       </Container>
@@ -63,11 +59,11 @@ export const NotionWaitlistEmail = ({ userFirstname }: EmailProps) => (
   </Html>
 );
 
-NotionWaitlistEmail.PreviewProps = {
-  userFirstname: "Tyler",
+CampusRankWaitlistEmail.PreviewProps = {
+  userFirstname: "Student",
 } as EmailProps;
 
-export default NotionWaitlistEmail;
+  export default CampusRankWaitlistEmail;
 
 const main = {
   background: "linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)",
